@@ -44,7 +44,11 @@
     <Compile Include="AirlinesBLL.cs" />
     <Compile Include="AirportsBLL.cs" />
     <Compile Include="CountrysBLL.cs" />
+    <Compile Include="FlightsBLL.cs" />
+    <Compile Include="PassengersBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationsBLL.cs" />
+    <Compile Include="RoutesBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

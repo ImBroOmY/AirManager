@@ -15,6 +15,7 @@ namespace AirManager {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
+            string HashedPassword = txtPassword.Text.GetHashCode().ToString();
             if (txtUsername.Text != "admin" && txtPassword.Text != "admin") {
                 FrmAdmin frmAdmin = new FrmAdmin();
                 this.Hide();

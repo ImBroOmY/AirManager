@@ -38,7 +38,7 @@ namespace AirManager {
             this.Hide();
             frmAirports.ShowDialog();
             if (frmAirports.DialogResult == DialogResult.OK) {
-                refresh();
+                refreshDataGrid();
             }
             this.Visible = true;
         }
@@ -49,7 +49,7 @@ namespace AirManager {
             this.Hide();
             frmAirports.ShowDialog();
             if (frmAirports.DialogResult == DialogResult.OK) {
-                refresh();
+                refreshDataGrid();
             }
             this.Visible = true;
         }

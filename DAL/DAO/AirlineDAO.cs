@@ -31,8 +31,10 @@ namespace DAL.DAO {
                             }).OrderBy(x => x.Name).ToList();
 
                 List<AirlineDTO> airlinesList = new List<AirlineDTO>();
+
                 foreach (var item in list) {
                     AirlineDTO dto = new AirlineDTO();
+
                     dto.AirlineID = item.AirlineID;
                     dto.Name = item.Name;
                     dto.IATA = item.IATA;
@@ -42,6 +44,7 @@ namespace DAL.DAO {
 
                     airlinesList.Add(dto);
                 }
+
                 return airlinesList;
             }
             catch (Exception ex) {

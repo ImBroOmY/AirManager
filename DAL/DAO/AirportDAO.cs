@@ -17,7 +17,7 @@ namespace DAL.DAO {
             }
         }
 
-        public static List<DAL.DTO.AirportDTO> GetAirports() {
+        public static List<AirportDTO> GetAirports() {
             try {
                 var list = (from a in db.Airports
                             join c in db.Countries on a.CountryID equals c.CountryID
@@ -34,6 +34,7 @@ namespace DAL.DAO {
                             }).OrderBy(x => x.Name).ToList();
 
                 List<AirportDTO> airportsList = new List<AirportDTO>();
+
                 foreach (var item in list) {
                     AirportDTO dto = new AirportDTO();
                     dto.AirportID = item.AirportID;

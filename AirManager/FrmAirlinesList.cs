@@ -37,7 +37,7 @@ namespace AirManager {
             frmAirlines.Text = "AirManager - Add Airline";
             this.Hide();
             if (frmAirlines.ShowDialog() == DialogResult.OK) {
-                refresh();
+                refreshDataGrid();
             }
             this.Validate();
         }
@@ -47,7 +47,7 @@ namespace AirManager {
             frmAirlines.Text = "AirManager - Update Airline";
             this.Hide();
             if (frmAirlines.ShowDialog() == DialogResult.OK) {
-                refresh();
+                refreshDataGrid();
             }
             this.Validate();
         }
