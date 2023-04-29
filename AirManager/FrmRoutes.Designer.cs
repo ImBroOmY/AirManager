@@ -39,7 +39,7 @@
             this.lblDestination.Margin = new System.Windows.Forms.Padding(0);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(67, 13);
-            this.lblDestination.TabIndex = 22;
+            this.lblDestination.TabIndex = 2;
             this.lblDestination.Text = "Destination";
             // 
             // lblOrigin
@@ -49,7 +49,7 @@
             this.lblOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.lblOrigin.Name = "lblOrigin";
             this.lblOrigin.Size = new System.Drawing.Size(40, 13);
-            this.lblOrigin.TabIndex = 16;
+            this.lblOrigin.TabIndex = 0;
             this.lblOrigin.Text = "Origin";
             // 
             // btnCancel
@@ -61,7 +61,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -75,7 +75,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(300, 50);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -89,7 +89,7 @@
             this.cmbOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.cmbOrigin.Name = "cmbOrigin";
             this.cmbOrigin.Size = new System.Drawing.Size(493, 21);
-            this.cmbOrigin.TabIndex = 25;
+            this.cmbOrigin.TabIndex = 1;
             // 
             // cmbDestination
             // 
@@ -100,7 +100,7 @@
             this.cmbDestination.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDestination.Name = "cmbDestination";
             this.cmbDestination.Size = new System.Drawing.Size(493, 21);
-            this.cmbDestination.TabIndex = 32;
+            this.cmbDestination.TabIndex = 3;
             // 
             // FrmRoutes
             // 

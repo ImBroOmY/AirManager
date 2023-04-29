@@ -44,7 +44,7 @@
             this.cmbCountry.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(224, 21);
-            this.cmbCountry.TabIndex = 25;
+            this.cmbCountry.TabIndex = 3;
             // 
             // lblCountry
             // 
@@ -53,7 +53,7 @@
             this.lblCountry.Margin = new System.Windows.Forms.Padding(0);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(43, 13);
-            this.lblCountry.TabIndex = 24;
+            this.lblCountry.TabIndex = 2;
             this.lblCountry.Text = "Country";
             // 
             // txtICAO
@@ -62,7 +62,7 @@
             this.txtICAO.Margin = new System.Windows.Forms.Padding(0);
             this.txtICAO.Name = "txtICAO";
             this.txtICAO.Size = new System.Drawing.Size(224, 20);
-            this.txtICAO.TabIndex = 21;
+            this.txtICAO.TabIndex = 7;
             // 
             // txtIATA
             // 
@@ -71,7 +71,7 @@
             this.txtIATA.MaxLength = 3;
             this.txtIATA.Name = "txtIATA";
             this.txtIATA.Size = new System.Drawing.Size(224, 20);
-            this.txtIATA.TabIndex = 19;
+            this.txtIATA.TabIndex = 5;
             // 
             // txtName
             // 
@@ -80,7 +80,7 @@
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(224, 20);
-            this.txtName.TabIndex = 17;
+            this.txtName.TabIndex = 1;
             // 
             // lblICAO
             // 
@@ -89,7 +89,7 @@
             this.lblICAO.Margin = new System.Windows.Forms.Padding(0);
             this.lblICAO.Name = "lblICAO";
             this.lblICAO.Size = new System.Drawing.Size(32, 13);
-            this.lblICAO.TabIndex = 20;
+            this.lblICAO.TabIndex = 6;
             this.lblICAO.Text = "ICAO";
             // 
             // lblIATA
@@ -99,7 +99,7 @@
             this.lblIATA.Margin = new System.Windows.Forms.Padding(0);
             this.lblIATA.Name = "lblIATA";
             this.lblIATA.Size = new System.Drawing.Size(31, 13);
-            this.lblIATA.TabIndex = 18;
+            this.lblIATA.TabIndex = 4;
             this.lblIATA.Text = "IATA";
             // 
             // lblName
@@ -109,7 +109,7 @@
             this.lblName.Margin = new System.Windows.Forms.Padding(0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 16;
+            this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
             // btnCancel
@@ -121,7 +121,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -135,7 +135,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(300, 50);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

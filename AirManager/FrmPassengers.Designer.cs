@@ -45,7 +45,7 @@
             this.txtPhone.MaxLength = 50;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(224, 22);
-            this.txtPhone.TabIndex = 29;
+            this.txtPhone.TabIndex = 7;
             // 
             // lblDateOfBirth
             // 
@@ -54,7 +54,7 @@
             this.lblDateOfBirth.Margin = new System.Windows.Forms.Padding(0);
             this.lblDateOfBirth.Name = "lblDateOfBirth";
             this.lblDateOfBirth.Size = new System.Drawing.Size(72, 13);
-            this.lblDateOfBirth.TabIndex = 26;
+            this.lblDateOfBirth.TabIndex = 8;
             this.lblDateOfBirth.Text = "Date of Birth";
             // 
             // txtEmail
@@ -64,7 +64,7 @@
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(224, 22);
-            this.txtEmail.TabIndex = 23;
+            this.txtEmail.TabIndex = 5;
             // 
             // lblPhone
             // 
@@ -73,7 +73,7 @@
             this.lblPhone.Margin = new System.Windows.Forms.Padding(0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(40, 13);
-            this.lblPhone.TabIndex = 24;
+            this.lblPhone.TabIndex = 6;
             this.lblPhone.Text = "Phone";
             // 
             // lblEmail
@@ -83,7 +83,7 @@
             this.lblEmail.Margin = new System.Windows.Forms.Padding(0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(34, 13);
-            this.lblEmail.TabIndex = 22;
+            this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "Email";
             // 
             // txtFirstName
@@ -93,7 +93,7 @@
             this.txtFirstName.MaxLength = 50;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(224, 22);
-            this.txtFirstName.TabIndex = 17;
+            this.txtFirstName.TabIndex = 1;
             // 
             // lblLastName
             // 
@@ -102,7 +102,7 @@
             this.lblLastName.Margin = new System.Windows.Forms.Padding(0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(58, 13);
-            this.lblLastName.TabIndex = 18;
+            this.lblLastName.TabIndex = 2;
             this.lblLastName.Text = "Last name";
             // 
             // lblFistName
@@ -112,7 +112,7 @@
             this.lblFistName.Margin = new System.Windows.Forms.Padding(0);
             this.lblFistName.Name = "lblFistName";
             this.lblFistName.Size = new System.Drawing.Size(60, 13);
-            this.lblFistName.TabIndex = 16;
+            this.lblFistName.TabIndex = 0;
             this.lblFistName.Text = "First name";
             // 
             // btnCancel
@@ -124,7 +124,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -138,7 +138,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(300, 50);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -150,14 +150,14 @@
             this.txtLastName.MaxLength = 50;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(224, 22);
-            this.txtLastName.TabIndex = 23;
+            this.txtLastName.TabIndex = 3;
             // 
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.Location = new System.Drawing.Point(45, 235);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(224, 22);
-            this.dtpDateOfBirth.TabIndex = 34;
+            this.dtpDateOfBirth.TabIndex = 9;
             this.dtpDateOfBirth.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // FrmPassengers

@@ -44,7 +44,7 @@
             this.txtPrice.MaxLength = 50;
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(224, 22);
-            this.txtPrice.TabIndex = 27;
+            this.txtPrice.TabIndex = 5;
             // 
             // lblStatus
             // 
@@ -53,7 +53,7 @@
             this.lblStatus.Margin = new System.Windows.Forms.Padding(0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(39, 13);
-            this.lblStatus.TabIndex = 28;
+            this.lblStatus.TabIndex = 6;
             this.lblStatus.Text = "Status";
             // 
             // lblPrice
@@ -63,7 +63,7 @@
             this.lblPrice.Margin = new System.Windows.Forms.Padding(0);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(31, 13);
-            this.lblPrice.TabIndex = 26;
+            this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Price";
             // 
             // lblPassenger
@@ -73,7 +73,7 @@
             this.lblPassenger.Margin = new System.Windows.Forms.Padding(0);
             this.lblPassenger.Name = "lblPassenger";
             this.lblPassenger.Size = new System.Drawing.Size(59, 13);
-            this.lblPassenger.TabIndex = 22;
+            this.lblPassenger.TabIndex = 2;
             this.lblPassenger.Text = "Passenger";
             // 
             // lblName
@@ -83,7 +83,7 @@
             this.lblName.Margin = new System.Windows.Forms.Padding(0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(37, 13);
-            this.lblName.TabIndex = 16;
+            this.lblName.TabIndex = 0;
             this.lblName.Text = "Flight";
             // 
             // btnCancel
@@ -95,7 +95,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -109,7 +109,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(300, 50);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 8;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -123,7 +123,7 @@
             this.cmbFlight.Margin = new System.Windows.Forms.Padding(0);
             this.cmbFlight.Name = "cmbFlight";
             this.cmbFlight.Size = new System.Drawing.Size(493, 21);
-            this.cmbFlight.TabIndex = 32;
+            this.cmbFlight.TabIndex = 1;
             this.cmbFlight.SelectedIndexChanged += new System.EventHandler(this.cmbFlight_SelectedIndexChanged);
             // 
             // cmbPassenger
@@ -135,7 +135,7 @@
             this.cmbPassenger.Margin = new System.Windows.Forms.Padding(0);
             this.cmbPassenger.Name = "cmbPassenger";
             this.cmbPassenger.Size = new System.Drawing.Size(493, 21);
-            this.cmbPassenger.TabIndex = 33;
+            this.cmbPassenger.TabIndex = 3;
             // 
             // cmbStatus
             // 
@@ -146,7 +146,7 @@
             this.cmbStatus.Margin = new System.Windows.Forms.Padding(0);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(224, 21);
-            this.cmbStatus.TabIndex = 34;
+            this.cmbStatus.TabIndex = 7;
             // 
             // FrmReservations
             // 

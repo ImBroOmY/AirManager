@@ -44,7 +44,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(67, 250);
+            this.btnLogin.Location = new System.Drawing.Point(67, 285);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(350, 40);
@@ -57,7 +57,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(67, 175);
+            this.lblPassword.Location = new System.Drawing.Point(67, 195);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(66, 17);
             this.lblPassword.TabIndex = 3;
@@ -76,7 +76,7 @@
             // txtPassword
             // 
             this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPassword.Location = new System.Drawing.Point(67, 205);
+            this.txtPassword.Location = new System.Drawing.Point(67, 225);
             this.txtPassword.MaxLength = 64;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
@@ -96,7 +96,7 @@
             // 
             this.picLogo.BackgroundImage = global::AirManager.Resources.LogoColor;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Location = new System.Drawing.Point(148, 35);
+            this.picLogo.Location = new System.Drawing.Point(148, 45);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(45, 45);
             this.picLogo.TabIndex = 2;
@@ -106,7 +106,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(207, 42);
+            this.lblTitle.Location = new System.Drawing.Point(207, 52);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(129, 30);
             this.lblTitle.TabIndex = 0;
@@ -123,10 +123,10 @@
             this.panel.Controls.Add(this.lblTitle);
             this.panel.Controls.Add(this.txtPassword);
             this.panel.Controls.Add(this.txtUsername);
-            this.panel.Location = new System.Drawing.Point(175, 70);
+            this.panel.Location = new System.Drawing.Point(175, 50);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(484, 360);
-            this.panel.TabIndex = 1;
+            this.panel.Size = new System.Drawing.Size(484, 411);
+            this.panel.TabIndex = 0;
             // 
             // btnSignUp
             // 
@@ -135,11 +135,11 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(67, 304);
+            this.btnSignUp.Location = new System.Drawing.Point(67, 340);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(0);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(350, 30);
-            this.btnSignUp.TabIndex = 5;
+            this.btnSignUp.TabIndex = 6;
             this.btnSignUp.Text = "SIGN UP";
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);

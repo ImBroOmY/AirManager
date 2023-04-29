@@ -69,7 +69,7 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(834, 354);
-            this.dataGridView.TabIndex = 16;
+            this.dataGridView.TabIndex = 1;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // panelBottom
@@ -84,7 +84,7 @@
             this.panelBottom.Margin = new System.Windows.Forms.Padding(0);
             this.panelBottom.Name = "panelBottom";
             this.panelBottom.Size = new System.Drawing.Size(834, 70);
-            this.panelBottom.TabIndex = 14;
+            this.panelBottom.TabIndex = 2;
             // 
             // btnClose
             // 
@@ -95,7 +95,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 40);
-            this.btnClose.TabIndex = 7;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -109,7 +109,7 @@
             this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 40);
-            this.btnDelete.TabIndex = 6;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -123,7 +123,7 @@
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(0);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(150, 40);
-            this.btnUpdate.TabIndex = 5;
+            this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -137,7 +137,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 40);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -157,7 +157,7 @@
             this.panelTop.Margin = new System.Windows.Forms.Padding(0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(834, 87);
-            this.panelTop.TabIndex = 15;
+            this.panelTop.TabIndex = 0;
             // 
             // txtSearch
             // 
@@ -195,7 +195,7 @@
             this.cmbDestination.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDestination.Name = "cmbDestination";
             this.cmbDestination.Size = new System.Drawing.Size(250, 21);
-            this.cmbDestination.TabIndex = 4;
+            this.cmbDestination.TabIndex = 3;
             this.cmbDestination.SelectedIndexChanged += new System.EventHandler(this.cmbDestination_SelectedIndexChanged);
             // 
             // lblDate
@@ -206,7 +206,7 @@
             this.lblDate.Margin = new System.Windows.Forms.Padding(0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(34, 15);
-            this.lblDate.TabIndex = 3;
+            this.lblDate.TabIndex = 4;
             this.lblDate.Text = "Date:";
             // 
             // lblDestination
@@ -217,7 +217,7 @@
             this.lblDestination.Margin = new System.Windows.Forms.Padding(0);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(70, 15);
-            this.lblDestination.TabIndex = 3;
+            this.lblDestination.TabIndex = 2;
             this.lblDestination.Text = "Destination:";
             // 
             // cmbOrigin
@@ -227,7 +227,7 @@
             this.cmbOrigin.Margin = new System.Windows.Forms.Padding(0);
             this.cmbOrigin.Name = "cmbOrigin";
             this.cmbOrigin.Size = new System.Drawing.Size(250, 21);
-            this.cmbOrigin.TabIndex = 2;
+            this.cmbOrigin.TabIndex = 1;
             this.cmbOrigin.SelectedIndexChanged += new System.EventHandler(this.cmbOrigin_SelectedIndexChanged);
             // 
             // lblOrigin

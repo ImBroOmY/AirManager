@@ -45,7 +45,7 @@
             this.lblDuration.Margin = new System.Windows.Forms.Padding(0);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(53, 13);
-            this.lblDuration.TabIndex = 26;
+            this.lblDuration.TabIndex = 6;
             this.lblDuration.Text = "Duration";
             // 
             // lblTime
@@ -55,7 +55,7 @@
             this.lblTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(31, 13);
-            this.lblTime.TabIndex = 24;
+            this.lblTime.TabIndex = 4;
             this.lblTime.Text = "Time";
             // 
             // lblDate
@@ -65,7 +65,7 @@
             this.lblDate.Margin = new System.Windows.Forms.Padding(0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(31, 13);
-            this.lblDate.TabIndex = 22;
+            this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date";
             // 
             // lblRoute
@@ -75,7 +75,7 @@
             this.lblRoute.Margin = new System.Windows.Forms.Padding(0);
             this.lblRoute.Name = "lblRoute";
             this.lblRoute.Size = new System.Drawing.Size(38, 13);
-            this.lblRoute.TabIndex = 16;
+            this.lblRoute.TabIndex = 0;
             this.lblRoute.Text = "Route";
             // 
             // btnCancel
@@ -87,7 +87,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 50);
-            this.btnCancel.TabIndex = 31;
+            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -101,7 +101,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(300, 50);
-            this.btnSave.TabIndex = 30;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -115,14 +115,14 @@
             this.cmbRoute.Margin = new System.Windows.Forms.Padding(0);
             this.cmbRoute.Name = "cmbRoute";
             this.cmbRoute.Size = new System.Drawing.Size(493, 21);
-            this.cmbRoute.TabIndex = 32;
+            this.cmbRoute.TabIndex = 1;
             // 
             // dtpDate
             // 
             this.dtpDate.Location = new System.Drawing.Point(45, 155);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(224, 22);
-            this.dtpDate.TabIndex = 33;
+            this.dtpDate.TabIndex = 3;
             this.dtpDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // dtpTime
@@ -131,7 +131,7 @@
             this.dtpTime.Location = new System.Drawing.Point(314, 155);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(224, 22);
-            this.dtpTime.TabIndex = 33;
+            this.dtpTime.TabIndex = 5;
             this.dtpTime.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // dtpDuration
@@ -141,7 +141,7 @@
             this.dtpDuration.Location = new System.Drawing.Point(45, 235);
             this.dtpDuration.Name = "dtpDuration";
             this.dtpDuration.Size = new System.Drawing.Size(224, 22);
-            this.dtpDuration.TabIndex = 33;
+            this.dtpDuration.TabIndex = 7;
             this.dtpDuration.Value = new System.DateTime(2023, 1, 1, 1, 0, 0, 0);
             // 
             // lblAirline
@@ -151,7 +151,7 @@
             this.lblAirline.Margin = new System.Windows.Forms.Padding(0);
             this.lblAirline.Name = "lblAirline";
             this.lblAirline.Size = new System.Drawing.Size(40, 13);
-            this.lblAirline.TabIndex = 26;
+            this.lblAirline.TabIndex = 8;
             this.lblAirline.Text = "Airline";
             // 
             // cmbAirline
@@ -160,7 +160,7 @@
             this.cmbAirline.Location = new System.Drawing.Point(314, 235);
             this.cmbAirline.Name = "cmbAirline";
             this.cmbAirline.Size = new System.Drawing.Size(224, 21);
-            this.cmbAirline.TabIndex = 34;
+            this.cmbAirline.TabIndex = 9;
             // 
             // FrmFlights
             // 
