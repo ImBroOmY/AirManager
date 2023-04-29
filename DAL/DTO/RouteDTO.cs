@@ -17,5 +17,10 @@ namespace DAL.DTO {
         public string DestinationAirportCity { get; set; }
         public string DestinationAirportCountryID { get; set; }
         public string DestinationAirportCountry { get; set; }
+        public string toString {
+            get {
+                return OriginAirportName + " -> " + DestinationAirportName;
+            }
+        }
     }
 }

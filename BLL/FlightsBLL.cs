@@ -13,5 +13,9 @@ namespace BLL {
         public static List<DAL.DTO.FlightDTO> GetFlights() {
             return DAL.DAO.FlightDAO.GetFlights();
         }
+
+        public static void Update(Flight flight) {
+            DAL.DAO.FlightDAO.Update(flight);
+        }
     }
 }

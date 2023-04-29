@@ -1,5 +1,5 @@
 ﻿namespace AirManager {
-    partial class FrmAirportsList {
+    partial class FrmReservationsList {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAirportsList));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservationsList));
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -34,6 +34,12 @@
             this.panelTop = new System.Windows.Forms.Panel();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbDestination = new System.Windows.Forms.ComboBox();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblDestination = new System.Windows.Forms.Label();
+            this.cmbOrigin = new System.Windows.Forms.ComboBox();
+            this.lblOrigin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelBottom.SuspendLayout();
             this.panelTop.SuspendLayout();
@@ -55,15 +61,15 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView.Location = new System.Drawing.Point(0, 53);
+            this.dataGridView.Location = new System.Drawing.Point(0, 87);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(834, 388);
-            this.dataGridView.TabIndex = 0;
+            this.dataGridView.Size = new System.Drawing.Size(834, 354);
+            this.dataGridView.TabIndex = 16;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
             // panelBottom
@@ -78,7 +84,7 @@
             this.panelBottom.Margin = new System.Windows.Forms.Padding(0);
             this.panelBottom.Name = "panelBottom";
             this.panelBottom.Size = new System.Drawing.Size(834, 70);
-            this.panelBottom.TabIndex = 2;
+            this.panelBottom.TabIndex = 14;
             // 
             // btnClose
             // 
@@ -140,45 +146,116 @@
             // 
             this.panelTop.Controls.Add(this.txtSearch);
             this.panelTop.Controls.Add(this.lblSearch);
+            this.panelTop.Controls.Add(this.dtpDate);
+            this.panelTop.Controls.Add(this.cmbDestination);
+            this.panelTop.Controls.Add(this.lblDate);
+            this.panelTop.Controls.Add(this.lblDestination);
+            this.panelTop.Controls.Add(this.cmbOrigin);
+            this.panelTop.Controls.Add(this.lblOrigin);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(834, 50);
-            this.panelTop.TabIndex = 3;
+            this.panelTop.Size = new System.Drawing.Size(834, 87);
+            this.panelTop.TabIndex = 15;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(600, 15);
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Location = new System.Drawing.Point(534, 51);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(200, 22);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.Size = new System.Drawing.Size(250, 22);
+            this.txtSearch.TabIndex = 7;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(530, 17);
+            this.lblSearch.Location = new System.Drawing.Point(439, 51);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(45, 15);
-            this.lblSearch.TabIndex = 0;
+            this.lblSearch.TabIndex = 6;
             this.lblSearch.Text = "Search:";
             // 
-            // FrmAirportsList
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(534, 15);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(0);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(250, 22);
+            this.dtpDate.TabIndex = 5;
+            this.dtpDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
+            // 
+            // cmbDestination
+            // 
+            this.cmbDestination.FormattingEnabled = true;
+            this.cmbDestination.Location = new System.Drawing.Point(145, 51);
+            this.cmbDestination.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbDestination.Name = "cmbDestination";
+            this.cmbDestination.Size = new System.Drawing.Size(250, 21);
+            this.cmbDestination.TabIndex = 4;
+            this.cmbDestination.SelectedIndexChanged += new System.EventHandler(this.cmbDestination_SelectedIndexChanged);
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(439, 17);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(34, 15);
+            this.lblDate.TabIndex = 3;
+            this.lblDate.Text = "Date:";
+            // 
+            // lblDestination
+            // 
+            this.lblDestination.AutoSize = true;
+            this.lblDestination.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestination.Location = new System.Drawing.Point(49, 53);
+            this.lblDestination.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDestination.Name = "lblDestination";
+            this.lblDestination.Size = new System.Drawing.Size(70, 15);
+            this.lblDestination.TabIndex = 3;
+            this.lblDestination.Text = "Destination:";
+            // 
+            // cmbOrigin
+            // 
+            this.cmbOrigin.FormattingEnabled = true;
+            this.cmbOrigin.Location = new System.Drawing.Point(145, 15);
+            this.cmbOrigin.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbOrigin.Name = "cmbOrigin";
+            this.cmbOrigin.Size = new System.Drawing.Size(250, 21);
+            this.cmbOrigin.TabIndex = 2;
+            this.cmbOrigin.SelectedIndexChanged += new System.EventHandler(this.cmbOrigin_SelectedIndexChanged);
+            // 
+            // lblOrigin
+            // 
+            this.lblOrigin.AutoSize = true;
+            this.lblOrigin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrigin.Location = new System.Drawing.Point(50, 17);
+            this.lblOrigin.Margin = new System.Windows.Forms.Padding(0);
+            this.lblOrigin.Name = "lblOrigin";
+            this.lblOrigin.Size = new System.Drawing.Size(43, 15);
+            this.lblOrigin.TabIndex = 0;
+            this.lblOrigin.Text = "Origin:";
+            // 
+            // FrmReservationsList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(834, 511);
-            this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.panelBottom);
+            this.Controls.Add(this.panelTop);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmAirportsList";
+            this.Name = "FrmReservationsList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AirManager - Airports";
-            this.Load += new System.EventHandler(this.FrmAirportsList_Load);
+            this.Text = "AirManager - Reservations";
+            this.Load += new System.EventHandler(this.FrmReservationsList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panelBottom.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
@@ -191,11 +268,17 @@
 
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Panel panelBottom;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.ComboBox cmbDestination;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblDestination;
+        private System.Windows.Forms.ComboBox cmbOrigin;
+        private System.Windows.Forms.Label lblOrigin;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
     }

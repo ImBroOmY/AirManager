@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminsBLL.cs" />
     <Compile Include="AirlinesBLL.cs" />
     <Compile Include="AirportsBLL.cs" />
+    <Compile Include="BookingStatusesBLL.cs" />
     <Compile Include="CountrysBLL.cs" />
     <Compile Include="FlightsBLL.cs" />
     <Compile Include="PassengersBLL.cs" />

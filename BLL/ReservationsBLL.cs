@@ -13,5 +13,9 @@ namespace BLL {
         public static List<DAL.DTO.ReservationDTO> GetReservations() {
             return DAL.DAO.ReservationDAO.GetReservations();
         }
+
+        public static void Update(Reservation reservation) {
+            DAL.DAO.ReservationDAO.Update(reservation);
+        }
     }
 }

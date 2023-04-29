@@ -64,5 +64,17 @@ namespace DAL.DAO {
                 throw ex;
             }
         }
+
+        public static void Update(Route route) {
+            try {
+                Route oldRoute = db.Routes.FirstOrDefault(x => x.RouteID == route.RouteID);
+                oldRoute.OriginAirportID = route.OriginAirportID;
+                oldRoute.DestinationAirportID = route.DestinationAirportID;
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
     }
 }

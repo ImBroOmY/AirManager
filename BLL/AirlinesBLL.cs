@@ -15,5 +15,9 @@ namespace BLL {
         public static List<AirlineDTO> GetAirlines() {
             return DAL.DAO.AirlineDAO.GetAirlines();
         }
+
+        public static void Update(Airline airline) {
+            DAL.DAO.AdminDAO.Update(airline);
+        }
     }
 }

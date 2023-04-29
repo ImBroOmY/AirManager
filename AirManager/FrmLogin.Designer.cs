@@ -32,6 +32,7 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.btnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panel.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +115,7 @@
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
+            this.panel.Controls.Add(this.btnSignUp);
             this.panel.Controls.Add(this.btnLogin);
             this.panel.Controls.Add(this.lblPassword);
             this.panel.Controls.Add(this.picLogo);
@@ -121,10 +123,26 @@
             this.panel.Controls.Add(this.lblTitle);
             this.panel.Controls.Add(this.txtPassword);
             this.panel.Controls.Add(this.txtUsername);
-            this.panel.Location = new System.Drawing.Point(175, 90);
+            this.panel.Location = new System.Drawing.Point(175, 70);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(484, 331);
+            this.panel.Size = new System.Drawing.Size(484, 360);
             this.panel.TabIndex = 1;
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(22)))), ((int)(((byte)(84)))));
+            this.btnSignUp.FlatAppearance.BorderSize = 0;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.White;
+            this.btnSignUp.Location = new System.Drawing.Point(67, 304);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(350, 30);
+            this.btnSignUp.TabIndex = 5;
+            this.btnSignUp.Text = "SIGN UP";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // FrmLogin
             // 
@@ -157,6 +175,7 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
 

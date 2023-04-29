@@ -15,16 +15,44 @@ namespace AirManager {
         }
 
         private void btnAirports_Click(object sender, EventArgs e) {
-            FrmAirportsList list = new FrmAirportsList();
+            FrmAirportsList form = new FrmAirportsList();
             this.Hide();
-            list.ShowDialog();
+            form.ShowDialog();
             this.Visible = true;
         }
 
         private void btnAirlines_Click(object sender, EventArgs e) {
-            FrmAirlinesList list = new FrmAirlinesList();
+            FrmAirlinesList form = new FrmAirlinesList();
             this.Hide();
-            list.ShowDialog();
+            form.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnRoutes_Click(object sender, EventArgs e) {
+            FrmRoutesList form = new FrmRoutesList();
+            this.Hide();
+            form.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnFlights_Click(object sender, EventArgs e) {
+            FrmFlightsList form = new FrmFlightsList();
+            this.Hide(); 
+            form.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnPassengers_Click(object sender, EventArgs e) {
+            FrmPassengersList form = new FrmPassengersList();
+            this.Hide();
+            form.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnReservations_Click(object sender, EventArgs e) {
+            FrmReservationsList form = new FrmReservationsList();
+            this.Hide();
+            form.ShowDialog();
             this.Visible = true;
         }
     }

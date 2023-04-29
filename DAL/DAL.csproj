@@ -47,9 +47,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AirManagerDataClass.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\AirlineDAO.cs" />
     <Compile Include="DAO\AirManagerContext.cs" />
     <Compile Include="DAO\AirportDAO.cs" />
+    <Compile Include="DAO\BookingStatusDAL.cs" />
     <Compile Include="DAO\CountryDAO.cs" />
     <Compile Include="DAO\FlightDAO.cs" />
     <Compile Include="DAO\PassengerDAO.cs" />

@@ -14,5 +14,10 @@ namespace DAL.DTO {
         public string PhoneNumber { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+        public string toString {
+            get {
+                return PassengerID.ToString() + ": " + FirstName + " " + LastName + " " + DateOfBirth.ToString("dd/MM/yyyy");
+            }
+        }
     }
 }

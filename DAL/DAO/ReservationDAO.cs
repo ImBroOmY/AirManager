@@ -23,12 +23,14 @@ namespace DAL.DAO {
                             join rt in db.Routes on f.RouteID equals rt.RouteID
                             join a1 in db.Airports on rt.OriginAirportID equals a1.AirportID
                             join a2 in db.Airports on rt.DestinationAirportID equals a2.AirportID
+                            join a in db.Airlines on f.AirlineID equals a.AirlineID
                             join c1 in db.Countries on a1.CountryID equals c1.CountryID
                             join c2 in db.Countries on a2.CountryID equals c2.CountryID
                             join s in db.BookingStatus on r.BookingStatus equals s.BookingStatusID
                             select new {
                                 ReservationID = r.ReservationID,
                                 FlightID = r.FlightID,
+                                FlightNumber = f.FlightNumber,
                                 RouteID = f.RouteID,
                                 OriginAirportID = rt.OriginAirportID,
                                 OriginAirportName = a1.Name,
@@ -40,6 +42,8 @@ namespace DAL.DAO {
                                 DestinationAirportCity = a2.City,
                                 DestinationAirportCountryID = a2.CountryID,
                                 DestinationAirportCountry = c2.Name,
+                                AirlineID = f.AirlineID,
+                                AirlineName = a.Name,
                                 DepartureTime = f.DepartureTime,
                                 Duration = f.Duration,
                                 Seats = f.Seats,
@@ -63,6 +67,7 @@ namespace DAL.DAO {
 
                     dto.ReservationID = item.ReservationID;
                     dto.FlightID = item.FlightID;
+                    dto.FlightNumber = item.FlightNumber;
                     dto.RouteID = item.RouteID;
                     dto.OriginAirportID = item.OriginAirportID;
                     dto.OriginAirportName = item.OriginAirportName;
@@ -74,6 +79,8 @@ namespace DAL.DAO {
                     dto.DestinationAirportCity = item.DestinationAirportCity;
                     dto.DestinationAirportCountryID = item.DestinationAirportCountryID;
                     dto.DestinationAirportCountry = item.DestinationAirportCountry;
+                    dto.AirlineID = item.AirlineID;
+                    dto.AirlineName = item.AirlineName;
                     dto.DepartureTime = item.DepartureTime;
                     dto.Duration = item.Duration;
                     dto.Seats = item.Seats;
@@ -93,6 +100,18 @@ namespace DAL.DAO {
                 }
 
                 return reservationsList;
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
+        public static void Update(Reservation reservation) {
+            try {
+                Reservation oldReservation = db.Reservations.FirstOrDefault(x => x.ReservationID == reservation.ReservationID);
+                oldReservation.PassengerID = reservation.PassengerID;
+                oldReservation.BookingStatus = reservation.BookingStatus;
+                db.SubmitChanges();
             }
             catch (Exception ex) {
                 throw ex;

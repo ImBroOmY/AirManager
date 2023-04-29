@@ -13,5 +13,9 @@ namespace BLL {
         public static List<DAL.DTO.AirportDTO> GetAirports() {
             return DAL.DAO.AirportDAO.GetAirports();
         }
+
+        public static void Update(Airport airport) {
+           DAL.DAO.AirportDAO.Update(airport);
+        }
     }
 }

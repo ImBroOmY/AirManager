@@ -33,8 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailHelper.cs" />
     <Compile Include="FrmAirlines.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +93,59 @@
     <Compile Include="FrmAirportsList.Designer.cs">
       <DependentUpon>FrmAirportsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFlights.Designer.cs">
+      <DependentUpon>FrmFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFlightsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFlightsList.Designer.cs">
+      <DependentUpon>FrmFlightsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPassengers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPassengers.Designer.cs">
+      <DependentUpon>FrmPassengers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPassengersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPassengersList.Designer.cs">
+      <DependentUpon>FrmPassengersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReservations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReservations.Designer.cs">
+      <DependentUpon>FrmReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReservationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReservationsList.Designer.cs">
+      <DependentUpon>FrmReservationsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRoutes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoutes.Designer.cs">
+      <DependentUpon>FrmRoutes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRoutesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoutesList.Designer.cs">
+      <DependentUpon>FrmRoutesList.cs</DependentUpon>
     </Compile>
     <Compile Include="General.cs" />
     <Compile Include="Program.cs" />
@@ -105,8 +170,32 @@
     <EmbeddedResource Include="FrmAirportsList.resx">
       <DependentUpon>FrmAirportsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFlights.resx">
+      <DependentUpon>FrmFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFlightsList.resx">
+      <DependentUpon>FrmFlightsList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPassengers.resx">
+      <DependentUpon>FrmPassengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPassengersList.resx">
+      <DependentUpon>FrmPassengersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReservations.resx">
+      <DependentUpon>FrmReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReservationsList.resx">
+      <DependentUpon>FrmReservationsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoutes.resx">
+      <DependentUpon>FrmRoutes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoutesList.resx">
+      <DependentUpon>FrmRoutesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +210,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

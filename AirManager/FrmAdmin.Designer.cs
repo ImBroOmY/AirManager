@@ -30,8 +30,8 @@
             this.btnAirlines = new System.Windows.Forms.Button();
             this.btnRoutes = new System.Windows.Forms.Button();
             this.btnFlights = new System.Windows.Forms.Button();
-            this.btnReservations = new System.Windows.Forms.Button();
             this.btnPassengers = new System.Windows.Forms.Button();
+            this.btnReservations = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +104,7 @@
             this.btnRoutes.TabIndex = 3;
             this.btnRoutes.Text = "Routes";
             this.btnRoutes.UseVisualStyleBackColor = true;
+            this.btnRoutes.Click += new System.EventHandler(this.btnRoutes_Click);
             // 
             // btnFlights
             // 
@@ -120,22 +121,7 @@
             this.btnFlights.TabIndex = 4;
             this.btnFlights.Text = "Flights";
             this.btnFlights.UseVisualStyleBackColor = true;
-            // 
-            // btnReservations
-            // 
-            this.btnReservations.BackgroundImage = global::AirManager.Resources.Gradient45;
-            this.btnReservations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservations.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservations.ForeColor = System.Drawing.Color.White;
-            this.btnReservations.Location = new System.Drawing.Point(44, 350);
-            this.btnReservations.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReservations.Name = "btnReservations";
-            this.btnReservations.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btnReservations.Size = new System.Drawing.Size(350, 75);
-            this.btnReservations.TabIndex = 5;
-            this.btnReservations.Text = "Reservations";
-            this.btnReservations.UseVisualStyleBackColor = true;
+            this.btnFlights.Click += new System.EventHandler(this.btnFlights_Click);
             // 
             // btnPassengers
             // 
@@ -144,14 +130,32 @@
             this.btnPassengers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPassengers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassengers.ForeColor = System.Drawing.Color.White;
-            this.btnPassengers.Location = new System.Drawing.Point(439, 350);
+            this.btnPassengers.Location = new System.Drawing.Point(44, 350);
             this.btnPassengers.Margin = new System.Windows.Forms.Padding(0);
             this.btnPassengers.Name = "btnPassengers";
             this.btnPassengers.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnPassengers.Size = new System.Drawing.Size(350, 75);
-            this.btnPassengers.TabIndex = 6;
+            this.btnPassengers.TabIndex = 5;
             this.btnPassengers.Text = "Passengers";
             this.btnPassengers.UseVisualStyleBackColor = true;
+            this.btnPassengers.Click += new System.EventHandler(this.btnPassengers_Click);
+            // 
+            // btnReservations
+            // 
+            this.btnReservations.BackgroundImage = global::AirManager.Resources.Gradient45;
+            this.btnReservations.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservations.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservations.ForeColor = System.Drawing.Color.White;
+            this.btnReservations.Location = new System.Drawing.Point(439, 350);
+            this.btnReservations.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReservations.Name = "btnReservations";
+            this.btnReservations.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnReservations.Size = new System.Drawing.Size(350, 75);
+            this.btnReservations.TabIndex = 6;
+            this.btnReservations.Text = "Reservations";
+            this.btnReservations.UseVisualStyleBackColor = true;
+            this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
             // 
             // FrmAdmin
             // 
@@ -159,8 +163,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(834, 511);
-            this.Controls.Add(this.btnPassengers);
             this.Controls.Add(this.btnReservations);
+            this.Controls.Add(this.btnPassengers);
             this.Controls.Add(this.btnFlights);
             this.Controls.Add(this.btnRoutes);
             this.Controls.Add(this.btnAirlines);
@@ -181,12 +185,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgLogo;
-        private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.Button btnAirports;
         private System.Windows.Forms.Button btnAirlines;
         private System.Windows.Forms.Button btnRoutes;
         private System.Windows.Forms.Button btnFlights;
-        private System.Windows.Forms.Button btnReservations;
         private System.Windows.Forms.Button btnPassengers;
+        private System.Windows.Forms.Button btnReservations;
+        public System.Windows.Forms.Label lblHello;
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
+using System.Text.RegularExpressions;
 
 namespace AirManager {
     public class General {
@@ -20,6 +22,22 @@ namespace AirManager {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) {
                 return true;
             }
+            return false;
+        }
+        public static bool isEmail(TextBox textBox, string name) {
+            if (Regex.IsMatch(textBox.Text, @"^[\w\.-]+@[\w\.-]+\.\w+$")) {
+                return true;
+            }
+            MessageBox.Show("The " + name + " must be a valid email format!\nExample: airmanager@mihainiculai.ro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            textBox.Focus();
+            return false;
+        }
+        public static bool isPhone(TextBox textBox, string name) {
+            if (Regex.IsMatch(textBox.Text, @"^\+\d{1,4}\d{7,10}$")) {
+                return true;
+            }
+            MessageBox.Show("The " + name + " must be a valid phone format!\nExample: +40712345678", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            textBox.Focus();
             return false;
         }
         public static bool VerifyEmptyTextBox(TextBox textBox, string name) {
@@ -53,6 +71,12 @@ namespace AirManager {
                 return true;
             }
             return false;
+        }
+        public static string HashPassword(string password) {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+        public static bool VerifyPassword(string password, string hash) {
+            return BCrypt.Net.BCrypt.Verify(password, hash);
         }
     }
 }

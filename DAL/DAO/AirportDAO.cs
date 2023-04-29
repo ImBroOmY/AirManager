@@ -56,5 +56,22 @@ namespace DAL.DAO {
                 throw ex;
             }
         }
+
+        public static void Update(Airport airport) {
+            try {
+                Airport oldAirport = db.Airports.FirstOrDefault(x => x.AirportID == airport.AirportID);
+                oldAirport.Name = airport.Name;
+                oldAirport.IATA = airport.IATA;
+                oldAirport.ICAO = airport.ICAO;
+                oldAirport.City = airport.City;
+                oldAirport.CountryID = airport.CountryID;
+                oldAirport.Latitude = airport.Latitude;
+                oldAirport.Longitude = airport.Longitude;
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
     }
 }

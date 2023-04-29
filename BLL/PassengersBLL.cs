@@ -13,5 +13,9 @@ namespace BLL {
         public static List<DAL.DTO.PassengerDTO> GetPassengers() {
             return DAL.DAO.PassengerDAO.GetPassengers();
         }
+
+        public static void Update(Passenger passenger) {
+            DAL.DAO.PassengerDAO.Update(passenger);
+        }
     }
 }

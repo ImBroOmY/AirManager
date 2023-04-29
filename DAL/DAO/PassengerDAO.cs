@@ -50,5 +50,22 @@ namespace DAL.DAO {
                 throw ex;
             }
         }
+
+        public static void Update(Passenger passenger) {
+            try {
+                Passenger oldPassenger = db.Passengers.FirstOrDefault(x => x.PassengerID == passenger.PassengerID);
+                oldPassenger.FirstName = passenger.FirstName;
+                oldPassenger.LastName = passenger.LastName;
+                oldPassenger.DateOfBirth = passenger.DateOfBirth;
+                oldPassenger.Email = passenger.Email;
+                oldPassenger.PhoneNumber = passenger.PhoneNumber;
+                oldPassenger.Username = passenger.Username;
+                oldPassenger.Password = passenger.Password;
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
     }
 }

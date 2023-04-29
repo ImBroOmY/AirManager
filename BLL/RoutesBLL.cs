@@ -13,5 +13,9 @@ namespace BLL {
         public static List<DAL.DTO.RouteDTO> GetRoutes() {
             return DAL.DAO.RouteDAO.GetRoutes();
         }
+
+        public static void Update(Route route) {
+            DAL.DAO.RouteDAO.Update(route);
+        }
     }
 }
