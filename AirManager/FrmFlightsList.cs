@@ -16,7 +16,6 @@ namespace AirManager {
         List<DAL.DTO.AirportDTO> airports1 = new List<DAL.DTO.AirportDTO>();
         List<DAL.DTO.AirportDTO> airports2 = new List<DAL.DTO.AirportDTO>();
 
-        bool isUpdate = false;
         DAL.DTO.FlightDTO detail = new DAL.DTO.FlightDTO();
         public FrmFlightsList() {
             InitializeComponent();
@@ -28,10 +27,12 @@ namespace AirManager {
             cmbOrigin.DataSource = airports1;
             cmbOrigin.DisplayMember = "Name";
             cmbOrigin.ValueMember = "AirportID";
+            cmbOrigin.SelectedIndex = -1;
 
             cmbDestination.DataSource = airports2;
             cmbDestination.DisplayMember = "Name";
             cmbDestination.ValueMember = "AirportID";
+            cmbDestination.SelectedIndex = -1;
 
             refreshDataGrid();
             
@@ -53,6 +54,7 @@ namespace AirManager {
             dataGridView.Columns[15].HeaderText = "Departure Date";
             dataGridView.Columns[16].HeaderText = "Duration";
             dataGridView.Columns[17].HeaderText = "Seats Available";
+            dataGridView.Columns[18].Visible = false;
         }
         private void refreshDataGrid() {
             flights = BLL.FlightsBLL.GetFlights();
@@ -108,8 +110,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select a flight to delete!", "Delete Flight", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this flight?", "Delete Flight", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                FlightsBLL.Delete(detail.FlightID);
                 MessageBox.Show("Flight deleted successfully!", "Delete Flight", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 

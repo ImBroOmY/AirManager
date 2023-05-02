@@ -17,7 +17,6 @@ namespace AirManager {
         List<DAL.DTO.AirportDTO> airports1 = new List<DAL.DTO.AirportDTO>();
         List<DAL.DTO.AirportDTO> airports2 = new List<DAL.DTO.AirportDTO>();
 
-        bool isUpdate = false;
         RouteDTO detail = new RouteDTO();
         public FrmRoutesList() {
             InitializeComponent();
@@ -30,12 +29,12 @@ namespace AirManager {
             cmbOrigin.DataSource = airports1;
             cmbOrigin.DisplayMember = "Name";
             cmbOrigin.ValueMember = "AirportID";
-            cmbOrigin.SelectedIndex = 0;
+            cmbOrigin.SelectedIndex = -1;
 
             cmbDestination.DataSource = airports2;
             cmbDestination.DisplayMember = "Name";
             cmbDestination.ValueMember = "AirportID";
-            cmbDestination.SelectedIndex = 0;
+            cmbDestination.SelectedIndex = -1;
 
             refreshDataGrid();
 
@@ -54,33 +53,15 @@ namespace AirManager {
         }
         private void refreshDataGrid() {
             routes = BLL.RoutesBLL.GetRoutes();
+
+            if (cmbOrigin.SelectedIndex >= 0 && cmbOrigin.SelectedValue is int) {
+                routes = routes.Where(x => x.OriginAirportID == Convert.ToInt32(cmbOrigin.SelectedValue)).ToList();
+            }
+            if (cmbDestination.SelectedIndex >= 0 && cmbDestination.SelectedValue is int) {
+                routes = routes.Where(x => x.DestinationAirportID == Convert.ToInt32(cmbDestination.SelectedValue)).ToList();
+            }
+
             dataGridView.DataSource = routes;
-
-            int originID;
-            int destinationID;
-
-            if (cmbOrigin.SelectedValue == null) {
-                originID = 0;
-            } else {
-                try {
-                    originID = (int)cmbOrigin.SelectedValue;
-                }
-                catch (Exception) {
-                    originID = 0;
-                }
-            }
-            if (cmbDestination.SelectedValue == null) {
-                destinationID = 0;
-            } else {
-                try {
-                    destinationID = (int)cmbDestination.SelectedValue;
-                }
-                catch (Exception) {
-                    destinationID = 0;
-                }
-            }
-
-            dataGridView.DataSource = routes.Where(x => x.OriginAirportID == originID && x.DestinationAirportID == destinationID).ToList();
 
             if (dataGridView.Rows.Count > 0) {
                 detail = routes.Find(x => x.RouteID == Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value));
@@ -120,8 +101,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select a route to delete!", "Delete Route", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this route?", "Delete Route", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                RoutesBLL.Delete(detail.RouteID);
                 MessageBox.Show("Route deleted successfully!", "Delete Route", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 

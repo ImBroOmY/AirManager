@@ -78,5 +78,13 @@ namespace AirManager {
         public static bool VerifyPassword(string password, string hash) {
             return BCrypt.Net.BCrypt.Verify(password, hash);
         }
+        public static string GenerateVerificationCode() {
+            Random random = new Random();
+            string verificationCode = String.Empty;
+            for (int i = 0; i < 6; i++) {
+                verificationCode += random.Next(0, 9);
+            }
+            return verificationCode;
+        }
     }
 }

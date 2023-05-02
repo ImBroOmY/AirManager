@@ -16,7 +16,6 @@ namespace AirManager {
         List<DAL.DTO.AirportDTO> airports1 = new List<DAL.DTO.AirportDTO>();
         List<DAL.DTO.AirportDTO> airports2 = new List<DAL.DTO.AirportDTO>();
 
-        bool isUpdate = false;
         DAL.DTO.ReservationDTO detail = new DAL.DTO.ReservationDTO();
 
         public FrmReservationsList() {
@@ -24,19 +23,21 @@ namespace AirManager {
         }
 
         private void FrmReservationsList_Load(object sender, EventArgs e) {
-            refreshDataGrid();
             airports1 = BLL.AirportsBLL.GetAirports();
             airports2 = BLL.AirportsBLL.GetAirports();
 
             cmbOrigin.DataSource = airports1;
             cmbOrigin.DisplayMember = "Name";
             cmbOrigin.ValueMember = "AirportID";
+            cmbOrigin.SelectedIndex = -1;
 
             cmbDestination.DataSource = airports2;
             cmbDestination.DisplayMember = "Name";
             cmbDestination.ValueMember = "AirportID";
+            cmbDestination.SelectedIndex = -1;
 
-            
+            refreshDataGrid();
+
             dataGridView.Columns[0].Visible = false;
             dataGridView.Columns[1].Visible = false;
             dataGridView.Columns[2].HeaderText = "Flight Number";
@@ -138,8 +139,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedCells.Count == 0) {
+                MessageBox.Show("Please select a reservation to delete!", "Delete Reservation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this reservation?", "Delete Reservation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                ReservationsBLL.Delete(detail.RouteID);
                 MessageBox.Show("Reservation deleted successfully!", "Delete Reservation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 

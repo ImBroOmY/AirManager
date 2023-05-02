@@ -12,6 +12,10 @@ namespace BLL {
             DAL.DAO.AirlineDAO.Add(airline);
         }
 
+        public static void Delete(int airlineID) {
+            DAL.DAO.AirlineDAO.Delete(airlineID);
+        }
+
         public static List<AirlineDTO> GetAirlines() {
             return DAL.DAO.AirlineDAO.GetAirlines();
         }

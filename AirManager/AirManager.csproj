@@ -93,6 +93,12 @@
     <Compile Include="FrmAirportsList.Designer.cs">
       <DependentUpon>FrmAirportsList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBook.Designer.cs">
+      <DependentUpon>FrmBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFlights.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,12 @@
     </Compile>
     <Compile Include="FrmFlightsList.Designer.cs">
       <DependentUpon>FrmFlightsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -147,6 +159,18 @@
     <Compile Include="FrmRoutesList.Designer.cs">
       <DependentUpon>FrmRoutesList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignUp.Designer.cs">
+      <DependentUpon>FrmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerification.Designer.cs">
+      <DependentUpon>FrmVerification.cs</DependentUpon>
+    </Compile>
     <Compile Include="General.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,11 +194,17 @@
     <EmbeddedResource Include="FrmAirportsList.resx">
       <DependentUpon>FrmAirportsList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBook.resx">
+      <DependentUpon>FrmBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFlights.resx">
       <DependentUpon>FrmFlights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFlightsList.resx">
       <DependentUpon>FrmFlightsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -196,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRoutesList.resx">
       <DependentUpon>FrmRoutesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignUp.resx">
+      <DependentUpon>FrmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerification.resx">
+      <DependentUpon>FrmVerification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

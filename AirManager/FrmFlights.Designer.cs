@@ -136,7 +136,7 @@
             // 
             // dtpDuration
             // 
-            this.dtpDuration.CustomFormat = "hh:mm";
+            this.dtpDuration.CustomFormat = "HH:mm";
             this.dtpDuration.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDuration.Location = new System.Drawing.Point(45, 235);
             this.dtpDuration.Name = "dtpDuration";

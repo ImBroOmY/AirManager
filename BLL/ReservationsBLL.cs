@@ -10,6 +10,11 @@ namespace BLL {
         public static void Add(Reservation reservation) {
             DAL.DAO.ReservationDAO.Add(reservation);
         }
+
+        public static void Delete(int routeID) {
+            DAL.DAO.ReservationDAO.Delete(routeID);
+        }
+
         public static List<DAL.DTO.ReservationDTO> GetReservations() {
             return DAL.DAO.ReservationDAO.GetReservations();
         }

@@ -15,6 +15,21 @@ namespace DAL.DAO {
             }
         }
 
+        public static void Delete(int flightID) {
+            try {
+                Flight flight = db.Flights.FirstOrDefault(x => x.FlightID == flightID);
+                db.Flights.DeleteOnSubmit(flight);
+                db.SubmitChanges();
+
+                List<Reservation> reservations = db.Reservations.Where(x => x.FlightID == flightID).ToList();
+                db.Reservations.DeleteAllOnSubmit(reservations);
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
         public static List<FlightDTO> GetFlights() {
             try {
                 var list = (from f in db.Flights

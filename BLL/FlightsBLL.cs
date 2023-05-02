@@ -10,6 +10,11 @@ namespace BLL {
         public static void Add(Flight flight) {
             DAL.DAO.FlightDAO.Add(flight);
         }
+
+        public static void Delete(int flightID) {
+            DAL.DAO.FlightDAO.Delete(flightID);
+        }
+
         public static List<DAL.DTO.FlightDTO> GetFlights() {
             return DAL.DAO.FlightDAO.GetFlights();
         }

@@ -17,6 +17,27 @@ namespace DAL.DAO {
             }
         }
 
+        public static void Delete(int airlineID) {
+            try {
+                Airline airline = db.Airlines.FirstOrDefault(x => x.AirlineID == airlineID);
+                db.Airlines.DeleteOnSubmit(airline);
+                db.SubmitChanges();
+
+                List<Flight> flights = db.Flights.Where(x => x.AirlineID == airlineID).ToList();
+                db.Flights.DeleteAllOnSubmit(flights);
+                db.SubmitChanges();
+
+                foreach (Flight flight in flights) {
+                    List<Reservation> reservations = db.Reservations.Where(x => x.FlightID == flight.FlightID).ToList();
+                    db.Reservations.DeleteAllOnSubmit(reservations);
+                    db.SubmitChanges();
+                }
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
         public static List<AirlineDTO> GetAirlines() {
             try {
                 var list = (from a in db.Airlines

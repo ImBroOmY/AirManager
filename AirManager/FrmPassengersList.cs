@@ -14,7 +14,6 @@ namespace AirManager {
     public partial class FrmPassengersList : Form {
         List<DAL.DTO.PassengerDTO> passengers = new List<DAL.DTO.PassengerDTO>();
 
-        bool isUpdate = false;
         DAL.DTO.PassengerDTO detail = new DAL.DTO.PassengerDTO();
 
         public FrmPassengersList() {
@@ -32,6 +31,7 @@ namespace AirManager {
             dataGridView.Columns[5].HeaderText = "Phone";
             dataGridView.Columns[6].Visible = false;
             dataGridView.Columns[7].Visible = false;
+            dataGridView.Columns[8].Visible = false;
         }
         private void refreshDataGrid() {
             passengers = BLL.PassengersBLL.GetPassengers();
@@ -82,8 +82,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select a passenger to delete!", "Delete Passenger", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this passenger?", "Delete Passenger", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                BLL.PassengersBLL.Delete(detail.PassengerID);
                 MessageBox.Show("Passenger deleted successfully!", "Delete Passenger", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 

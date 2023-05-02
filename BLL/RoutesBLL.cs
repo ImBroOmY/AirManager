@@ -10,6 +10,11 @@ namespace BLL {
         public static void Add(Route route) {
             DAL.DAO.RouteDAO.Add(route);
         }
+
+        public static void Delete(int routeID) {
+            DAL.DAO.RouteDAO.Delete(routeID);
+        }
+
         public static List<DAL.DTO.RouteDTO> GetRoutes() {
             return DAL.DAO.RouteDAO.GetRoutes();
         }

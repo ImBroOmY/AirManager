@@ -17,6 +17,33 @@ namespace DAL.DAO {
             }
         }
 
+        public static void Delete(int airportID) {
+            try {
+                Airport airport = db.Airports.FirstOrDefault(x => x.AirportID == airportID);
+                db.Airports.DeleteOnSubmit(airport);
+                db.SubmitChanges();
+
+                List<Route> routes = db.Routes.Where(x => x.OriginAirportID == airportID || x.DestinationAirportID== airportID).ToList();
+                db.Routes.DeleteAllOnSubmit(routes);
+                db.SubmitChanges();
+
+                foreach (Route route in routes) {
+                    List<Flight> flights = db.Flights.Where(x => x.RouteID == route.RouteID).ToList();
+                    db.Flights.DeleteAllOnSubmit(flights);
+                    db.SubmitChanges();
+
+                    foreach(Flight flight in flights) {
+                        List<Reservation> reservations = db.Reservations.Where(x => x.FlightID == flight.FlightID).ToList();
+                        db.Reservations.DeleteAllOnSubmit(reservations);
+                        db.SubmitChanges();
+                    }
+                }
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
         public static List<AirportDTO> GetAirports() {
             try {
                 var list = (from a in db.Airports

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using BLL;
 using DAL.DTO;
 
 namespace AirManager {
     public partial class FrmAirlinesList : Form {
         List<DAL.DTO.AirlineDTO> airlines = new List<DAL.DTO.AirlineDTO>();
 
-        bool isUpdate = false;
         AirlineDTO detail = new AirlineDTO();
         public FrmAirlinesList() {
             InitializeComponent();
@@ -70,8 +70,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select an airline to delete!", "Delete Airline", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this airline?", "Delete Airline", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                AirlinesBLL.Delete(detail.AirlineID);
                 MessageBox.Show("Airline deleted successfully!", "Delete Airline", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 

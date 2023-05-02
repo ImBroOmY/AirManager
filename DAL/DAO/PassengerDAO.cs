@@ -15,6 +15,21 @@ namespace DAL.DAO {
             }
         }
 
+        public static void Delete(int passengerID) {
+            try {
+                Passenger passenger = db.Passengers.FirstOrDefault(x => x.PassengerID == passengerID);
+                db.Passengers.DeleteOnSubmit(passenger);
+                db.SubmitChanges();
+
+                List<Reservation> reservations = db.Reservations.Where(x => x.PassengerID == passengerID).ToList();
+                db.Reservations.DeleteAllOnSubmit(reservations);
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
         public static List<PassengerDTO> GetPassengers() {
             try {
                 var list = (from p in db.Passengers
@@ -45,6 +60,14 @@ namespace DAL.DAO {
                 }
 
                 return passengersList;
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+        public static List<Passenger> Get() {
+            try {
+                return db.Passengers.ToList();
             }
             catch (Exception ex) {
                 throw ex;

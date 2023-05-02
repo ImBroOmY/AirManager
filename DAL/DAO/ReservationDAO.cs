@@ -15,6 +15,17 @@ namespace DAL.DAO {
             }
         }
 
+        public static void Delete(int routeID) {
+            try {
+                Reservation reservation = db.Reservations.FirstOrDefault(r => r.ReservationID == routeID);
+                db.Reservations.DeleteOnSubmit(reservation);
+                db.SubmitChanges();
+            }
+            catch (Exception ex) {
+                throw ex;
+            }
+        }
+
         public static List<ReservationDTO> GetReservations() {
             try {
                 var list = (from r in db.Reservations

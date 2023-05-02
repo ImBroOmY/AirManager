@@ -26,7 +26,7 @@ namespace DAL.DTO {
         public int Seats { get; set; }
         public string toString {
             get {
-                return FlightNumber + ": " + OriginAirportName + " -> " + DestinationAirportName + " (" + DepartureTime.ToString("dd/MM/yyyy") + ")";
+                return FlightNumber + ": " + OriginAirportName + " -> " + DestinationAirportName + " (" + DepartureTime.ToString("dd/MM/yyyy hh::mm tt ") + ")";
             }
         }
     }

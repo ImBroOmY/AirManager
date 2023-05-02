@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using BLL;
 using DAL.DTO;
 
 namespace AirManager {
     public partial class FrmAirportsList : Form {
-        List<DAL.DTO.AirportDTO> list = new List<DAL.DTO.AirportDTO>();
+        List<DAL.DTO.AirportDTO> airports = new List<DAL.DTO.AirportDTO>();
 
-        bool isUpdate = false;
         AirportDTO detail = new AirportDTO();
         public FrmAirportsList() {
             InitializeComponent();
@@ -28,11 +28,10 @@ namespace AirManager {
         }
 
         private void refreshDataGrid() {
-            list = BLL.AirportsBLL.GetAirports();
-            dataGridView.DataSource = list;
+            airports = BLL.AirportsBLL.GetAirports();
 
             string search = txtSearch.Text.ToLower();
-            dataGridView.DataSource = list.Where(x => x.AirportID.ToString().ToLower().Contains(search)
+            airports = airports.Where(x => x.AirportID.ToString().ToLower().Contains(search)
                                                 || x.Name.ToLower().Contains(search) 
                                                 || x.IATA.ToLower().Contains(search)
                                                 || x.ICAO.ToLower().Contains(search) 
@@ -42,13 +41,15 @@ namespace AirManager {
                                                 || x.Longitude.ToString().ToLower().Contains(search)
                                                 ).ToList();
 
+            dataGridView.DataSource = airports;
+
             if (dataGridView.Rows.Count > 0) {
-                detail = list.Find(x => x.AirportID == Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value));
+                detail = airports.Find(x => x.AirportID == Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value));
             }
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (dataGridView.Rows.Count > 0) {
-                detail = list.Find(x => x.AirportID == Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value));
+                detail = airports.Find(x => x.AirportID == Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value));
             }
         }
 
@@ -82,8 +83,15 @@ namespace AirManager {
         }
 
         private void btnDelete_Click(object sender, EventArgs e) {
+            if (dataGridView.SelectedRows.Count == 0) {
+                MessageBox.Show("Please select an airport to delete!", "Delete Airport", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show("Are you sure you want to delete this airport?", "Delete Airport", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                AirportsBLL.Delete(detail.AirportID);
                 MessageBox.Show("Airport deleted successfully!", "Delete Airport", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                refreshDataGrid();
             }
         }
 
