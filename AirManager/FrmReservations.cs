@@ -74,7 +74,10 @@ namespace AirManager {
             if (!isUpdate) reservation.FlightID = Convert.ToInt32(cmbFlight.SelectedValue);
             reservation.PassengerID = Convert.ToInt32(cmbPassenger.SelectedValue);
             reservation.BookingStatus = Convert.ToInt32(cmbStatus.SelectedValue);
-            if (!isUpdate) reservation.Price = Convert.ToDouble(txtPrice.Text);
+            if (!isUpdate) {
+                reservation.Price = Convert.ToDouble(txtPrice.Text);
+                reservation.Price = Math.Round(reservation.Price, 2);
+            }
             if (!isUpdate) reservation.SeatNumber = new Random().Next(0, flights[cmbFlight.SelectedIndex].Seats);
 
             if (!isUpdate) {

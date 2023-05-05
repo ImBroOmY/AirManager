@@ -231,7 +231,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmAirports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AirManager - Airports";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.FrmAirports_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -65,7 +65,7 @@ namespace AirManager {
 
         private void btnAirlines_Click(object sender, EventArgs e) {
             FrmBook frmBook = new FrmBook();
-            //frmBook.passenger = passenger;
+            frmBook.passenger = passenger;
             frmBook.ShowDialog();
             refreshDataGrid();
         }

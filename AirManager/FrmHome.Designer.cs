@@ -46,7 +46,7 @@
             this.btnAirlines.Name = "btnAirlines";
             this.btnAirlines.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.btnAirlines.Size = new System.Drawing.Size(200, 40);
-            this.btnAirlines.TabIndex = 10;
+            this.btnAirlines.TabIndex = 1;
             this.btnAirlines.Text = "Book a flight";
             this.btnAirlines.UseVisualStyleBackColor = true;
             this.btnAirlines.Click += new System.EventHandler(this.btnAirlines_Click);
@@ -58,7 +58,7 @@
             this.lblHello.Location = new System.Drawing.Point(118, 76);
             this.lblHello.Name = "lblHello";
             this.lblHello.Size = new System.Drawing.Size(173, 29);
-            this.lblHello.TabIndex = 7;
+            this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Hello, {name}";
             // 
             // imgLogo
@@ -78,7 +78,7 @@
             this.label1.Location = new System.Drawing.Point(45, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Upcoming flights";
             // 
             // dataGridView
@@ -105,7 +105,7 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(749, 224);
-            this.dataGridView.TabIndex = 15;
+            this.dataGridView.TabIndex = 3;
             // 
             // FrmHome
             // 

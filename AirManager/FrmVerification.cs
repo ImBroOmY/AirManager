@@ -24,8 +24,8 @@ namespace AirManager {
 
         private void FrmVerification_Load(object sender, EventArgs e) {
             //for tesqting purposes
-            //DialogResult = DialogResult.OK;
-            //return;
+            DialogResult = DialogResult.OK;
+            return;
 
             verificationCode = General.GenerateVerificationCode();
             EmailHelper.sendVerificationEmail(email, name, verificationCode);
