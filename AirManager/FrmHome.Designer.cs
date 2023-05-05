@@ -30,6 +30,7 @@
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.btnPrintTicket = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +108,23 @@
             this.dataGridView.Size = new System.Drawing.Size(749, 224);
             this.dataGridView.TabIndex = 3;
             // 
+            // btnPrintTicket
+            // 
+            this.btnPrintTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(22)))), ((int)(((byte)(84)))));
+            this.btnPrintTicket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrintTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintTicket.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnPrintTicket.ForeColor = System.Drawing.Color.White;
+            this.btnPrintTicket.Location = new System.Drawing.Point(674, 457);
+            this.btnPrintTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPrintTicket.Name = "btnPrintTicket";
+            this.btnPrintTicket.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnPrintTicket.Size = new System.Drawing.Size(120, 25);
+            this.btnPrintTicket.TabIndex = 1;
+            this.btnPrintTicket.Text = "Print ticket";
+            this.btnPrintTicket.UseVisualStyleBackColor = false;
+            this.btnPrintTicket.Click += new System.EventHandler(this.btnPrintTicket_Click);
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +132,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(834, 511);
             this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.btnPrintTicket);
             this.Controls.Add(this.btnAirlines);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblHello);
@@ -137,5 +156,6 @@
         private System.Windows.Forms.PictureBox imgLogo;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button btnPrintTicket;
     }
 }

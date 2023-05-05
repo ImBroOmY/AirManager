@@ -84,7 +84,7 @@ namespace AirManager {
                 }
             }
 
-            if (DialogResult.Yes != MessageBox.Show("The price is " + price + "$. Do you want to book this flight?", "Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) {
+            if (DialogResult.Yes != MessageBox.Show("The price is $" + price + ". Do you want to book this flight?", "Book", MessageBoxButtons.YesNo, MessageBoxIcon.Question)) {
                 return;
             }
 

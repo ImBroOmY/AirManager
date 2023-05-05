@@ -23,7 +23,7 @@ namespace AirManager {
         }
 
         private void FrmVerification_Load(object sender, EventArgs e) {
-            //for tesqting purposes
+            //for testing purposes
             DialogResult = DialogResult.OK;
             return;
 

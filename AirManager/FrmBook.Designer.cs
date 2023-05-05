@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBook));
             this.lblDestination = new System.Windows.Forms.Label();
             this.lblDeparture = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -163,6 +164,7 @@
             this.Controls.Add(this.btnSave);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
