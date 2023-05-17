@@ -55,5 +55,11 @@ namespace AirManager {
             form.ShowDialog();
             this.Visible = true;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                this.DialogResult = DialogResult.OK;
+            }
+        }
     }
 }

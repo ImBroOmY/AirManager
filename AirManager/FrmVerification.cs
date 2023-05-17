@@ -24,8 +24,8 @@ namespace AirManager {
 
         private void FrmVerification_Load(object sender, EventArgs e) {
             //for testing purposes
-            DialogResult = DialogResult.OK;
-            return;
+            //DialogResult = DialogResult.OK;
+            //return;
 
             verificationCode = General.GenerateVerificationCode();
             EmailHelper.sendVerificationEmail(email, name, verificationCode);
@@ -37,6 +37,12 @@ namespace AirManager {
             }
             else {
                 MessageBox.Show("Invalid verification code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtCode_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                btnContinue_Click((object)sender, e);
             }
         }
     }

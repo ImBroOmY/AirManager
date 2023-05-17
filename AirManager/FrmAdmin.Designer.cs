@@ -32,6 +32,7 @@
             this.btnFlights = new System.Windows.Forms.Button();
             this.btnPassengers = new System.Windows.Forms.Button();
             this.btnReservations = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -157,12 +158,33 @@
             this.btnReservations.UseVisualStyleBackColor = true;
             this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(198)))), ((int)(((byte)(172)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::AirManager.Resources.Logout;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(639, 54);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btnLogout.Size = new System.Drawing.Size(150, 40);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(254)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(834, 511);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnReservations);
             this.Controls.Add(this.btnPassengers);
             this.Controls.Add(this.btnFlights);
@@ -192,5 +214,6 @@
         private System.Windows.Forms.Button btnPassengers;
         private System.Windows.Forms.Button btnReservations;
         public System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

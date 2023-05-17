@@ -51,6 +51,7 @@ namespace AirManager {
 
             PassengersBLL.CreateAccount(passenger);
             MessageBox.Show("Account created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            EmailHelper.sendWelcomeEmail(passenger.Email, passenger.FirstName + " " + passenger.LastName);
             DialogResult = DialogResult.OK;
         }
 
