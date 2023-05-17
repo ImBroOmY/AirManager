@@ -1,4 +1,5 @@
 <p align="center">
+	<br>
     <img src="https://i.imgur.com/qW5Udoj.png" alt="Logo" width="100">
     <h3 align="center">AirManager</h3>
     <br>
