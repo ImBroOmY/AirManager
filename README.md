@@ -1,6 +1,7 @@
 <p align="center">
     <img src="https://i.imgur.com/qW5Udoj.png" alt="Logo" width="100">
     <h3 align="center">AirManager</h3>
+    <br>
 </p
 
 **AirManager** is a comprehensive, user-friendly application designed to provide an efficient and straightforward solution for air ticketing and management. Written in **C# using Windows Forms with .NET Framework** and powered by **Microsoft Database**, the application offers a high level of functionality and reliability.
@@ -29,18 +30,18 @@ This is a school project done at the **Faculty of Cybernetics, Statistics, and E
 ### 🛠️ Admin Interface
 The admin interface provides comprehensive management capabilities:
 
-🛫 **Airports**: Add, delete, and edit airports.
-🛩️ **Airlines**: Manage airline information, including adding, deleting, and editing airlines.
-🛤️ **Routes**: Create, modify, and delete routes for flights.
-✈️ **Flights**: Manage flight details, such as adding, deleting, and editing flight schedules.
-👤 **Passengers**: View and manage passenger information, including adding, deleting, and editing passenger profiles. 
-🎟️ **Reservations**: Handle reservations, including adding, deleting, and managing passenger bookings. 
+ - 🛫 **Airports**: Add, delete, and edit airports.
+ - 🛩️ **Airlines**: Manage airline information, including adding, deleting, and editing airlines.
+ - 🛤️ **Routes**: Create, modify, and delete routes for flights.
+ - ✈️ **Flights**: Manage flight details, such as adding, deleting, and editing flight schedules.
+ - 👤 **Passengers**: View and manage passenger information, including adding, deleting, and editing passenger profiles. 
+ - 🎟️ **Reservations**: Handle reservations, including adding, deleting, and managing passenger bookings. 
 
 ### 🧳 Passenger Interface
 The passenger interface allows users to purchase tickets and print them: 
 
-🎫 **Ticket Purchase**: Select desired flights, enter passenger details, and complete the ticket purchase process. 
-🖨️ **Ticket Printing**: Print purchased tickets for reference or travel purposes.
+ - 🎫 **Ticket Purchase**: Select desired flights, enter passenger details, and complete the ticket purchase process. 
+ - 🖨️ **Ticket Printing**: Print purchased tickets for reference or travel purposes.
 
 ## Getting Started 📝
 To run the AirManager application locally, follow these steps:
