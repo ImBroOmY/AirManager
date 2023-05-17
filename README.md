@@ -30,22 +30,16 @@ This is a school project done at the **Faculty of Cybernetics, Statistics, and E
 The admin interface provides comprehensive management capabilities:
 
 🛫 **Airports**: Add, delete, and edit airports.
-
 🛩️ **Airlines**: Manage airline information, including adding, deleting, and editing airlines.
-
 🛤️ **Routes**: Create, modify, and delete routes for flights.
-
 ✈️ **Flights**: Manage flight details, such as adding, deleting, and editing flight schedules.
-
 👤 **Passengers**: View and manage passenger information, including adding, deleting, and editing passenger profiles. 
-
 🎟️ **Reservations**: Handle reservations, including adding, deleting, and managing passenger bookings. 
 
 ### 🧳 Passenger Interface
 The passenger interface allows users to purchase tickets and print them: 
 
 🎫 **Ticket Purchase**: Select desired flights, enter passenger details, and complete the ticket purchase process. 
-
 🖨️ **Ticket Printing**: Print purchased tickets for reference or travel purposes.
 
 ## Getting Started 📝
