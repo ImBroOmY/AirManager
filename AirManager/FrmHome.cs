@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using QRCoder;
+using System.Drawing;
+using System.IO;
 
 namespace AirManager {
     public partial class FrmHome : Form {
@@ -74,6 +77,13 @@ namespace AirManager {
                     FileName = $"Ticket_{selectedReservation.FlightNumber}_{selectedReservation.FirstName}_{selectedReservation.LastName}_{selectedReservation.SeatNumber}.pdf"
                 };
 
+                string qrText = $"Flight Number: {selectedReservation.FlightNumber}, Origin: {selectedReservation.OriginAirportName}, Destination: {selectedReservation.DestinationAirportName}, Airline: {selectedReservation.AirlineName}, Departure Time: {selectedReservation.DepartureTime}, Duration: {selectedReservation.Duration}, Seat Number: {selectedReservation.SeatNumber}, Price: {selectedReservation.Price}, Status: {selectedReservation.Status}";
+
+                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
+                QRCode qrCode = new QRCode(qrCodeData);
+                Bitmap qrCodeImage = qrCode.GetGraphic(20);
+
                 if (saveFileDialog.ShowDialog() == DialogResult.OK) {
                     using (var doc = new PdfSharp.Pdf.PdfDocument()) {
                         var page = doc.AddPage();
@@ -130,6 +140,19 @@ namespace AirManager {
 
                         gfx.DrawLine(PdfSharp.Drawing.XPens.Black, 40, 450 + verticalSpacing, page.Width - 40, 450 + verticalSpacing);
 
+                        using (MemoryStream stream = new MemoryStream()) {
+                            qrCodeImage.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                            stream.Position = 0;
+                            var qrCodePdfImage = PdfSharp.Drawing.XImage.FromStream(stream);
+
+                            double qrCodeWidth = 100;
+                            double x = page.Width - qrCodeWidth - 40;
+                            double y = 40;
+
+                            gfx.DrawImage(qrCodePdfImage, x, y, qrCodeWidth, qrCodeWidth);
+
+                        }
+
                         doc.Save(saveFileDialog.FileName);
 
                     }
@@ -139,6 +162,12 @@ namespace AirManager {
             }
             else {
                 MessageBox.Show("Please select a reservation.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                this.DialogResult = DialogResult.OK;
             }
         }
     }

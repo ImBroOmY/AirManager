@@ -23,16 +23,19 @@ namespace AirManager {
 
             foreach (Admin admin in admins) {
                 if (admin.Username == txtUsername.Text && General.VerifyPassword(txtPassword.Text, admin.Password)) {
-                    FrmVerification frmVerification = new FrmVerification(admin.Email, admin.FirstName + " " + admin.LastName);
-                    if (frmVerification.ShowDialog() != DialogResult.OK) {
-                        return;
-                    }
+                    //FrmVerification frmVerification = new FrmVerification(admin.Email, admin.FirstName + " " + admin.LastName);
+                    //if (frmVerification.ShowDialog() != DialogResult.OK) {
+                    //    return;
+                    //}
 
                     FrmAdmin frmAdmin = new FrmAdmin();
                     frmAdmin.lblHello.Text = "Hello, " + admin.FirstName + " " + admin.LastName + "!";
                     this.Hide();
                     if (frmAdmin.ShowDialog() == DialogResult.OK) {
+                        txtUsername.Text = String.Empty;
+                        txtPassword.Text = String.Empty;
                         this.Show();
+                        txtUsername.Focus();
                     }
                     else {
                         this.Close();
@@ -53,7 +56,10 @@ namespace AirManager {
                     frmHome.passenger = passenger;
                     this.Hide();
                     if (frmHome.ShowDialog() == DialogResult.OK) {
+                        txtUsername.Text = String.Empty;
+                        txtPassword.Text = String.Empty;
                         this.Show();
+                        txtUsername.Focus();
                     }
                     else {
                         this.Close();
@@ -70,6 +76,24 @@ namespace AirManager {
             this.Hide();
             frmSignUp.ShowDialog();
             this.Visible = true;
+        }
+
+        private void FrmLogin_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Enter) {
+                btnLogin_Click(sender, e);
+            }
         }
     }
 }

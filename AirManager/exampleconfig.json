@@ -1,0 +1,11 @@
+{
+  "_comment": "Please rename this file to config.json",
+  
+  "EmailSettings": {
+      "SenderEmail": "airmanager@mihainiculai.ro",
+      "SenderPassword": "",
+      "SenderHost": "mail.mihainiculai.ro",
+      "SenderPort": 587,
+      "SenderSSL": true
+  }
+}
