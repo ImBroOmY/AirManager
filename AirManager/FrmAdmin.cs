@@ -61,5 +61,13 @@ namespace AirManager {
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void btnMap_Click(object sender, EventArgs e) {
+            FrmMap frmMap = new FrmMap();
+            this.Hide();
+            frmMap.mapAirports.SetAirports();
+            frmMap.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
