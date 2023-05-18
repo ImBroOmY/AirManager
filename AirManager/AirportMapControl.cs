@@ -78,7 +78,7 @@ namespace AirManager {
                     GetMarkerType(flightCount)
                 );
 
-                marker.ToolTipText = $"\n{airport.Name}\nNumber of flights: {flightCount}";
+                marker.ToolTipText = $"\n{airport.Name}\nIATA code: {airport.IATA}\nICAO code: {airport.ICAO}\nCity: {airport.City}\nCountry: {airport.CountryName}\nNumber of flights: {flightCount}";
                 marker.ToolTipMode = MarkerTooltipMode.OnMouseOver;
 
                 markersOverlay.Markers.Add(marker);
