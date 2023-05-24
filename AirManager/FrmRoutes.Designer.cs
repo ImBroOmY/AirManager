@@ -82,6 +82,8 @@
             // 
             // cmbOrigin
             // 
+            this.cmbOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbOrigin.BackColor = System.Drawing.Color.White;
             this.cmbOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOrigin.FormattingEnabled = true;
@@ -93,6 +95,8 @@
             // 
             // cmbDestination
             // 
+            this.cmbDestination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDestination.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbDestination.BackColor = System.Drawing.Color.White;
             this.cmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDestination.FormattingEnabled = true;

@@ -116,6 +116,8 @@
             // 
             // cmbFlight
             // 
+            this.cmbFlight.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbFlight.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbFlight.BackColor = System.Drawing.Color.White;
             this.cmbFlight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFlight.FormattingEnabled = true;
@@ -128,6 +130,8 @@
             // 
             // cmbPassenger
             // 
+            this.cmbPassenger.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPassenger.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbPassenger.BackColor = System.Drawing.Color.White;
             this.cmbPassenger.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPassenger.FormattingEnabled = true;
@@ -139,6 +143,8 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbStatus.BackColor = System.Drawing.Color.White;
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;

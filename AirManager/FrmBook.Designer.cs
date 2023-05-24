@@ -102,6 +102,7 @@
             this.dtpDate.Size = new System.Drawing.Size(224, 22);
             this.dtpDate.TabIndex = 32;
             this.dtpDate.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // dataGridView
             // 
@@ -131,6 +132,9 @@
             // 
             // cmbOrigin
             // 
+            this.cmbOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOrigin.FormattingEnabled = true;
             this.cmbOrigin.Location = new System.Drawing.Point(45, 60);
             this.cmbOrigin.Name = "cmbOrigin";
@@ -140,6 +144,9 @@
             // 
             // cmbDestination
             // 
+            this.cmbDestination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDestination.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDestination.FormattingEnabled = true;
             this.cmbDestination.Location = new System.Drawing.Point(317, 60);
             this.cmbDestination.Name = "cmbDestination";

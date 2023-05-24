@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirManagerDataClass.cs">
+      <DependentUpon>AirManagerDataClass.dbml</DependentUpon>
+    </Compile>
     <Compile Include="AirManagerDataClass.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

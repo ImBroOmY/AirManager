@@ -112,5 +112,9 @@ namespace AirManager {
         private void cmbDestination_SelectedIndexChanged(object sender, EventArgs e) {
             refrashDataGrid();
         }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e) {
+            refrashDataGrid();
+        }
     }
 }

@@ -153,6 +153,9 @@
             // 
             // cmbDestination
             // 
+            this.cmbDestination.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDestination.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDestination.FormattingEnabled = true;
             this.cmbDestination.Location = new System.Drawing.Point(504, 15);
             this.cmbDestination.Margin = new System.Windows.Forms.Padding(0);
@@ -174,6 +177,9 @@
             // 
             // cmbOrigin
             // 
+            this.cmbOrigin.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbOrigin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOrigin.FormattingEnabled = true;
             this.cmbOrigin.Location = new System.Drawing.Point(120, 15);
             this.cmbOrigin.Margin = new System.Windows.Forms.Padding(0);

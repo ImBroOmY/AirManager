@@ -108,6 +108,8 @@
             // 
             // cmbRoute
             // 
+            this.cmbRoute.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbRoute.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbRoute.BackColor = System.Drawing.Color.White;
             this.cmbRoute.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRoute.FormattingEnabled = true;
@@ -156,6 +158,8 @@
             // 
             // cmbAirline
             // 
+            this.cmbAirline.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbAirline.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbAirline.FormattingEnabled = true;
             this.cmbAirline.Location = new System.Drawing.Point(314, 235);
             this.cmbAirline.Name = "cmbAirline";
